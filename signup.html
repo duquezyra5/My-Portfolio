@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #FFD6E5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .split-container {
+      display: flex;
+      width: 100%;
+      max-width: 980px;
+      min-height: 620px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      background: white;
+    }
+
+    .signup-side {
+      flex: 1;
+      padding: 50px 50px;
+      background: violet;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .signup-side h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 45px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #fafafa;
+      transition: all 0.2s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #ff8c42;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.12);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .btn-signup {
+      background: #ff8c32;
+      color: blue;
+      margin-top: 18px;
+    }
+
+    .btn-signup:hover {
+      background: #blue;
+      transform: translateY(-1px);
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 28px;
+      font-ssize: 0.96rem;
+      color: #555;
+    }
+
+    .login-link a {
+      color: #green;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+      color: violet;
+    }
+
+    .welcome-side {
+      flex: 1;
+      background: #f7B96c;
+      color: red;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .welcome-side h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: red;
+    }
+
+    .welcome-side p {
+      font-size: 1.22rem;
+      line-height: 1.5;
+      margin-bottom: 40px;
+      color:  #blue;
+    }
+
+    .btn-login {
+      display: inline-block;
+      background: #ff8c42;
+      color: red;
+      padding: 14px 60px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .btn-login:hover {
+      background: #blue;
+      transform: scale(1.06);
+    }
+
+    @media (max-width: 850px) {
+      .split-container {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .signup-side, .welcome-side {
+        padding: 50px 30px;
+      }
+      .welcome-side {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="split-container">
+
+    <div class="signup-side">
+      <h1>Sign Up</h1>
+
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Choose a username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+        </div>
+
+        <button type="submit" class="btn btn-signup">Create Account</button>
+      </form>
+
+      <div class="login-link">
+        Already have an account? <a href="login.html">Login</a>
+      </div>
+    </div>
+
+    <div class="welcome-side">
+      <h2>Welcome!</h2>
+      <p>Already have an account?</p>
+      <a href="login.html" class="btn-login">Login</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
+		
